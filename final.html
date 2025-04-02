@@ -34,7 +34,7 @@
             const submitButton = document.getElementById("submit");
             const targetElement = document.getElementById("levels");
             const narrator = document.getElementById("narrator");
-            const correctPassword = "Hello World!";
+            const correctPassword = new set([ "Hello World!", "Hello World", "Hello, World!", "hello world!", "hello world", "hello, world!" ]);
             
             passwordInput.addEventListener("keyup", function (e) {
                 if (e.key === "Enter") {
@@ -44,7 +44,7 @@
             });
 
             submitButton.addEventListener("click", function () {
-                if (passwordInput.value === correctPassword) {
+                if (passwordInput.value in correctPassword) {
                     targetElement.style.display = "inline";
                     narrator.style.whiteSpace = "pre-Line"
                     narrator.textContent = "Well Done!\nflag{Best_Hacker_In_The_World}";
