@@ -34,7 +34,7 @@
             const submitButton = document.getElementById("submit");
             const targetElement = document.getElementById("levels");
             const narrator = document.getElementById("narrator");
-            const correctPassword = new set([ "Hello World!", "Hello World", "Hello, World!", "hello world!", "hello world", "hello, world!" ]);
+            const correctPassword = new Set([ "Hello World!", "Hello World", "Hello, World!", "hello world!", "hello world", "hello, world!" ]);
             
             passwordInput.addEventListener("keyup", function (e) {
                 if (e.key === "Enter") {
