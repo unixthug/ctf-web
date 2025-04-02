@@ -44,7 +44,7 @@
             });
 
             submitButton.addEventListener("click", function () {
-                if (passwordInput.value in correctPassword) {
+                if (correctPassword.has(passwordInput.value)) {
                     targetElement.style.display = "inline";
                     narrator.style.whiteSpace = "pre-Line"
                     narrator.textContent = "Well Done!\nflag{Best_Hacker_In_The_World}";
